@@ -8,6 +8,9 @@ jobs:
     build:
         runs-on: ubuntu-latest
 
+        env:
+            pass: ${{ secrets.pass }}
+
         steps:
             - uses: actions/checkout@v3
             - name: Setup Nodejs
