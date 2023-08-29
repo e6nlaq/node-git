@@ -1,0 +1,27 @@
+name: Run
+
+on:
+    push:
+        branches: [main]
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v3
+            - name: Setup Nodejs
+              uses: actions/setup-node@v3
+              with:
+                node-version: '18.x'
+
+                
+            - name: Install Lib
+              run: 'npm i'
+            
+            - name: Run
+              run: |
+                git config user.name "actions-user"
+                git config user.email "65916846+actions-user@users.noreply.github.com"
+                node index.js
+
