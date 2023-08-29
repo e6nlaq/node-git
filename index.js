@@ -9,7 +9,7 @@ const main = (data) => {//メッセージを受け取ったときにどんな処
 	clouddatas = temp.clouddatas;//クラウド変数のデータ
 	const changedlists = temp.changedlists;//変更された変数一覧
 
-	fs.writeFileSync('./dat.txt', clouddatas["ab"].value);
+	fs.writeFileSync('./dat.txt', String(clouddatas["ab"].value));
 
 	execSync('git add .');
 	execSync('git commit -m "test"');
