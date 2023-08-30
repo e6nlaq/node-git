@@ -10,10 +10,11 @@ const main = (data) => {//メッセージを受け取ったときにどんな処
 	const changedlists = temp.changedlists;//変更された変数一覧
 
 	if (String(clouddatas["ab"].value) == "-1") {
-		exit(0);
+		process.exit(0);
 	}
 
 	fs.writeFileSync('./dat.txt', String(clouddatas["ab"].value));
+	scloudjs.sendtocloud('cnt', Number(clouddatas["cnt"].value) + 1);
 
 	execSync('git add .');
 	execSync('git commit -m "test"');
