@@ -10,6 +10,7 @@ jobs:
 
         env:
             pass: ${{ secrets.pass }}
+            user: ${{ secrets.user }}
 
         steps:
             - uses: actions/checkout@v3
