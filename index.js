@@ -16,7 +16,7 @@ const main = (data) => {//メッセージを受け取ったときにどんな処
 	execSync('git push');
 };
 
-scloudjs.setdatas("sakamotor", process.env.pass, "887014703", main);//いろいろデータを設定する
+scloudjs.setdatas(process.env.user, process.env.pass, "887014703", main);//いろいろデータを設定する
 
 const func = async () => {//実行
 
