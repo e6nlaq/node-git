@@ -1,5 +1,6 @@
 const fs = require('fs');
 require('date-utils');
+require('dotenv').config();
 const { execSync } = require('child_process');
 const scloudjs = require("scloudjs"); //scloudjsをモジュールとして使えるようにする
 let clouddatas = new Object();//このオブジェクトにクラウド変数のデータが入る
